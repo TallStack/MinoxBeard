@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autofac;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +10,9 @@ namespace MinoxBeard
         public App()
         {
             InitializeComponent();
+            ContainerBuilder _builder = new ContainerBuilder();
 
-            MainPage = new MainPage();
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()

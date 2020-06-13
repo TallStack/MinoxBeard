@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:MinoxBeard.Views"
+       xmlns:controls="clr-namespace:MinoxBeard.Controls"
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       x:Class="MinoxBeard.AppShell">
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeader />
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Beard Wiki">
+        <Tab Title="MenuItem"
+             Icon="paw.png">
+            <ShellContent Title="MenuItem"
+                          Icon="cat.png">
+                <views:HomePage />
+            </ShellContent>
+            <ShellContent Title="MenuItem"
+                          Icon="dog.png">
+                <views:HomePage />
+            </ShellContent>
+        </Tab>
+        <ShellContent Title="MenuItem"
+                      Icon="monkey.png">
+            <views:MainPage />
+        </ShellContent>
+        <ShellContent Title="MenuItem"
+                      Icon="elephant.png">
+            <views:MainPage />
+        </ShellContent>
+        <ShellContent Title="MenuItem"
+                      Icon="bear.png">
+            <views:MainPage />
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Home">
+        <ShellContent Title="Home"
+                      Icon="bear.png">
+            <views:HomePage/>
+        </ShellContent>
+    </FlyoutItem>
+
+
+</Shell>
