@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace MinoxBeard.Droid
 {
-    [Activity(Label = "Minox Beard Spot",Theme = "@style/Theme.Splash", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "Minox Beard",Icon = "@drawable/BeardIcon",Theme = "@style/Theme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
