@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace MinoxBeard.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : ContentPage
+    public partial class FaqsPage : ContentPage
     {
-        public MainPage()
+        public FaqsPage()
         {
             InitializeComponent();
         }

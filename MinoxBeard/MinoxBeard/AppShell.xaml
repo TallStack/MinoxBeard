@@ -3,43 +3,58 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:MinoxBeard.Views"
        xmlns:controls="clr-namespace:MinoxBeard.Controls"
-       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundColor="#2c417d"
        FlyoutBackgroundImageAspect="AspectFill"
        FlyoutHeaderBehavior="CollapseOnScroll"
+       BackgroundColor="#2c417d"
        x:Class="MinoxBeard.AppShell">
     <Shell.FlyoutHeader>
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Title="Beard Wiki">
-        <Tab Title="MenuItem"
-             Icon="paw.png">
-            <ShellContent Title="MenuItem"
-                          Icon="cat.png">
+    <FlyoutItem Title="Beard Wiki"
+                Icon="wiki">
+        
+            <ShellContent Title="Home"
+                          Icon="home">
                 <views:HomePage />
             </ShellContent>
-            <ShellContent Title="MenuItem"
-                          Icon="dog.png">
-                <views:HomePage />
-            </ShellContent>
-        </Tab>
-        <ShellContent Title="MenuItem"
-                      Icon="monkey.png">
-            <views:MainPage />
+           
+        <ShellContent Title="Routine"
+                      Icon="routine">
+            <views:RoutinePage />
         </ShellContent>
-        <ShellContent Title="MenuItem"
-                      Icon="elephant.png">
-            <views:MainPage />
+        <ShellContent Title="Essentials"
+                      Icon="items">
+            <views:EssentialsPage />
         </ShellContent>
-        <ShellContent Title="MenuItem"
-                      Icon="bear.png">
-            <views:MainPage />
+        <ShellContent Title="FAQs"
+                      Icon="faq">
+            <views:FaqsPage />
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem Title="Home">
-        <ShellContent Title="Home"
-                      Icon="bear.png">
+    <FlyoutItem Title="Home"
+                Icon="home">
+        <ShellContent>
             <views:HomePage/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Routine"
+                Icon="routine">
+        <ShellContent >
+            <views:RoutinePage/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Essentials"
+                Icon="items">
+        <ShellContent >
+            <views:EssentialsPage/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="FAQs"
+                Icon="faq">
+        <ShellContent >
+            <views:FaqsPage/>
         </ShellContent>
     </FlyoutItem>
 
