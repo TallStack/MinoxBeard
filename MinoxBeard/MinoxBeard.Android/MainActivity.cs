@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Gms.Ads;
 
 namespace MinoxBeard.Droid
 {
@@ -18,7 +19,7 @@ namespace MinoxBeard.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-
+            MobileAds.Initialize(ApplicationContext, "ca-app-pub-5452051705648807~1581568695");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
