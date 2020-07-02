@@ -18,8 +18,8 @@ namespace MinoxBeard.Views
             InitializeComponent();
             AdmobControl admobControl = new AdmobControl()
             {
-                AdUnitId = AppConstants.BannerId,
-                BackgroundColor = Color.Red
+                AdUnitId = AppConstants.BannerId
+               // BackgroundColor = Color.Red
             };
             Label adLabel = new Label() { Text = "Ads will display here", HorizontalOptions = LayoutOptions.CenterAndExpand, VerticalOptions = LayoutOptions.CenterAndExpand };
 
