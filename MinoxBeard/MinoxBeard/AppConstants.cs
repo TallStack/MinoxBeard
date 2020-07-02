@@ -33,5 +33,19 @@ namespace MinoxBeard
                 }
             }
         }
+
+        public static string InterstitialAdId
+        {
+            get
+            {
+                switch (Device.RuntimePlatform)
+                {
+                    case Device.Android:
+                        return "ca-app-pub-5452051705648807/4246388342";
+                    default:
+                        return "ca-app-pub-5452051705648807/4246388342";
+                }
+            }
+        }
     }
 }

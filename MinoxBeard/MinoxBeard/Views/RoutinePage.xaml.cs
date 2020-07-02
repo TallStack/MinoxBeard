@@ -23,14 +23,23 @@ namespace MinoxBeard.Views
             };
             Label adLabel = new Label() { Text = "Ads will display here", HorizontalOptions = LayoutOptions.CenterAndExpand, VerticalOptions = LayoutOptions.CenterAndExpand };
 
+            Button ShowAd = new Button() { Text = "Show Ads", HorizontalOptions = LayoutOptions.CenterAndExpand, VerticalOptions = LayoutOptions.CenterAndExpand };
+            ShowAd.Clicked += ShowAd_Clicked;
+
             Content = new StackLayout()
             {
                 Children =
                 {
-                    adLabel, admobControl
+                    adLabel, ShowAd, admobControl
                 }
             };
-            
+
+            async void ShowAd_Clicked(object sender, EventArgs e)
+            {
+                await DependencyService.Get<IAdmobInterstitialAds>().Display(AppConstants.InterstitialAdId);
+            }
+
+
         }
     }
 }
