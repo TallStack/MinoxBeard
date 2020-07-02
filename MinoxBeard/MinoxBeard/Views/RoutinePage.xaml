@@ -7,10 +7,6 @@
              x:Class="MinoxBeard.Views.RoutinePage"
              Title="Daily Routine">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Routine!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+      
     </ContentPage.Content>
 </ContentPage>
