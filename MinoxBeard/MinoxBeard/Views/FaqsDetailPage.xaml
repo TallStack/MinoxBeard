@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:models="clr-namespace:MinoxBeard.Models"
+             xmlns:viewModels="clr-namespace:MinoxBeard.ViewModels"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             BackgroundColor="#1a2647"
+             x:DataType="viewModels:FaqDetailViewModel"
+             x:Class="MinoxBeard.Views.FaqsDetailPage">
+    <ContentPage.Resources>
+   
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300" />
+                </Grid.RowDefinitions>
+
+                <yummy:PancakeView
+                    CornerRadius="0,0,30,30"
+                    HasShadow="True"
+                    HeightRequest="300"
+                    IsClippedToBounds="True">
+
+                    <CarouselView x:Name="imagesCarousel" ItemsSource="{Binding CarouselImages}">
+                        <CarouselView.ItemsLayout>
+                            <LinearItemsLayout
+                                Orientation="Vertical"
+                                SnapPointsAlignment="Start"
+                                SnapPointsType="MandatorySingle" />
+                        </CarouselView.ItemsLayout>
+                        <d:CarouselView.ItemsSource>
+                            <x:Array Type="{x:Type models:CarouselImage}">
+                                <models:CarouselImage Source="beard1" />
+                                <models:CarouselImage Source="beard2" />
+                                <models:CarouselImage Source="beard3" />
+                            </x:Array>
+                        </d:CarouselView.ItemsSource>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate x:DataType="models:CarouselImage">
+                                <Image
+                                    Aspect="AspectFill"
+                                    HeightRequest="300"
+                                    Source="{Binding Source}" />
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                </yummy:PancakeView>
+
+                <Label
+                    Margin="20,10,0,0"
+                    FontSize="40"
+                    HorizontalOptions="Start"
+                    Text=""
+                    TextColor="White"
+                    VerticalOptions="Start">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </Grid>
+
+            <StackLayout Margin="20">
+                <Label
+                    FontSize="26"
+                    TextColor="Gold"
+                    FontAttributes="Bold"
+                    Text="{Binding Title}" />
+                <Label
+                    Margin="0,0,0,40"
+                    FontSize="16"
+                    TextColor="White"
+                    Text="Lets find out!" />
+
+                <yummy:PancakeView
+                                        CornerRadius="25"                                     
+                                        HorizontalOptions="Center"
+                                        Opacity="1"
+                                        VerticalOptions="Center">
+                    <Image Aspect="AspectFill" Source="{Binding Item.Subtitle}" />
+                </yummy:PancakeView>
+
+                <Label
+                    Margin="0,20,0,0"
+                    FontSize="16"
+                    LineHeight="2">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontSize="16"
+                                Text="" />
+                            <Span
+                                FontSize="16"
+                                TextColor="White"
+                                Text="{Binding Description}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+
+                <Button
+                    Padding="20"
+                    BackgroundColor="BlueViolet"
+                    CornerRadius="25"
+                    Text="Need More Information?"
+                    TextColor="White" />
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using MinoxBeard.Services;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,6 +12,7 @@ namespace MinoxBeard
         {
             InitializeComponent();
             ContainerBuilder _builder = new ContainerBuilder();
+            DependencyService.Register<FaqDataStore>();
 
             MainPage = new AppShell();
         }

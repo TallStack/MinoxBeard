@@ -3,15 +3,138 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:models="clr-namespace:MinoxBeard.Models"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Name="BrowseItemsPage"
              mc:Ignorable="d"
              x:Class="MinoxBeard.Views.FaqsPage"
              Title="FAQs">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to FAQs!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout  BackgroundColor="#1a2647" Padding="15,0,15,0">
+        <Grid HeightRequest="130">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="0" Margin="20">
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="Gold"
+                        Text="Got Any Questions?" />
+
+                </StackLayout>
+                <Label
+                    FontSize="18"
+                   
+                    FontAttributes="Bold"
+                    Text="Top questions" />
+            </StackLayout>
+
+        </Grid>
+        <!--<BoxView
+            Margin="20,0"
+            BackgroundColor="LightGray"
+            HeightRequest="0.5" />-->
+
+        <RefreshView Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+            <CollectionView
+                x:Name="ItemsList"
+                BackgroundColor="#1a2647"
+                ItemsSource="{Binding Items}"
+                SelectionChanged="ItemsListView_SelectionChanged"
+                SelectionMode="Single"
+                VerticalOptions="FillAndExpand">
+                <d:CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type models:FaqItem}">
+                        <models:FaqItem
+                            Description="This is a description! Lorem ipsum dolor sit amet bla bla bla sdkfl sdk fmlsdf. Her odp åsd æ?"
+                            Icon="&#xf2d5;"
+                            Price="319"
+                            Subtitle="&amp; australia"
+                            Text="Asia" />
+                        <models:FaqItem
+                            Description="This is a description!"
+                            Icon="&#xf2d1;"
+                            Price="521"
+                            Subtitle="&amp; northern"
+                            Text="Scandinavian" />
+                        <models:FaqItem
+                            Description="This is a description!"
+                            Icon="&#xf2d5;"
+                            Price="743"
+                            Subtitle="debuts in fall"
+                            Text="Sky Princess" />
+                        <models:FaqItem
+                            Description="This is a description!"
+                            Icon="&#xf2d5;"
+                            Subtitle="amazing"
+                            Text="Experience" />
+                    </x:Array>
+                </d:CollectionView.ItemsSource>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="20" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:FaqItem">
+                        <yummy:PancakeView
+                            Margin="10"
+                            Padding="10"
+                            BackgroundColor="White"
+                            CornerRadius="25"
+                            HeightRequest="120"
+                            HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label
+                                        FontSize="18"
+                                        LineBreakMode="NoWrap"
+                                        FontAttributes="Bold"
+                                        Text="{Binding Text}" />
+
+
+                                </StackLayout>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <yummy:PancakeView
+                                        CornerRadius="10"
+                                        HeightRequest="80"
+                                        HorizontalOptions="Center"
+                                        Opacity="1"
+                                        VerticalOptions="Center"
+                                        WidthRequest="110">
+                                        <Image Aspect="AspectFill" Source="beardQ" />
+                                    </yummy:PancakeView>
+
+                                    <Label
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        FontSize="15"
+                                        LineBreakMode="WordWrap"
+                                        
+                                        Text="{Binding Description}" />
+                                    <!--<Label
+                                        Grid.Column="1"
+                                        Margin="0,0,10,0"
+                                        FontSize="17"
+                                        HorizontalOptions="End"
+                                        Text="{Binding Price, StringFormat='$ {0:}'}"
+                                        VerticalOptions="End" />-->
+                                </Grid>
+
+                            </StackLayout>
+                        </yummy:PancakeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
     </StackLayout>
 
 </ContentPage>
