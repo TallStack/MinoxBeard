@@ -74,6 +74,10 @@ namespace MinoxBeard.Views
 
         async void ImageButton_Pressed_1(object sender, EventArgs e)
         {
+            if (AppConstants.ShowAds)
+            {
+                await DependencyService.Get<IAdmobInterstitialAds>().Display(AppConstants.InterstitialAdId);
+            }
             await Navigation.PushAsync(new AddRecordPage());
         }
     }

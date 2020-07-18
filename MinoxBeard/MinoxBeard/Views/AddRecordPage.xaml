@@ -4,11 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:renderers="clr-namespace:MinoxBeard.Renderers"
+             xmlns:controls="clr-namespace:MinoxBeard.Controls"
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              BackgroundColor="#1a2647"
              x:Class="MinoxBeard.Views.AddRecordPage">
-    
+
     <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <StackLayout >
             <StackLayout Margin="5,5,5,5"  Orientation="Horizontal">
@@ -66,7 +67,7 @@
                             Text="{Binding Note}"/>
                         </yummy:PancakeView>
                     </StackLayout>
-                    
+
 
                     <yummy:PancakeView
                     BackgroundColor="#791AE5"
@@ -141,9 +142,10 @@
                             WidthRequest="20" />
                         </yummy:PancakeView>
                     </StackLayout>-->
-                   
+
                 </StackLayout>
             </yummy:PancakeView>
+            <controls:AdmobControl AdUnitId="ca-app-pub-5452051705648807/8530120426"></controls:AdmobControl>
         </StackLayout>
     </ScrollView>
 </ContentPage>
