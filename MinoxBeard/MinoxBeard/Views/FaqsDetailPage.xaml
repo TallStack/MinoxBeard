@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              xmlns:models="clr-namespace:MinoxBeard.Models"
+             xmlns:controls="clr-namespace:MinoxBeard.Controls"
              xmlns:viewModels="clr-namespace:MinoxBeard.ViewModels"
+             NavigationPage.HasNavigationBar="False"
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              BackgroundColor="#1a2647"
              x:DataType="viewModels:FaqDetailViewModel"
@@ -109,11 +111,22 @@
                     Padding="20"
                     BackgroundColor="BlueViolet"
                     CornerRadius="25"
+                    Pressed="Button_Pressed"
                     Text="Need More Information?"
-                    TextColor="White" />
-
+                    TextColor="White"/>
+                <!--<Label Text="More Information"
+               TextColor="Blue"
+               TextDecorations="Underline"
+               HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                      CommandParameter="https://www.beardwiki.com/minoxidil-faq" />
+                    </Label.GestureRecognizers>
+                </Label>-->
             </StackLayout>
-
+            <controls:AdmobControl AdUnitId="ca-app-pub-5452051705648807/8530120426"></controls:AdmobControl>
         </StackLayout>
+        
     </ScrollView>
+    
 </ContentPage>

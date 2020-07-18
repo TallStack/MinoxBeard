@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace MinoxBeard.ViewModels
 {
@@ -24,5 +27,6 @@ namespace MinoxBeard.ViewModels
                 new CarouselImage { Source = "beard3" }
             };
         }
+        //public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
     }
 }

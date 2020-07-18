@@ -1,10 +1,12 @@
 ﻿using MinoxBeard.ViewModels;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,6 +16,7 @@ namespace MinoxBeard.Views
     public partial class FaqsDetailPage : ContentPage
     {
         FaqDetailViewModel viewModel;
+       
         //private PancakeView previouslySelectedCategory;
 
         public FaqsDetailPage(FaqDetailViewModel viewModel)
@@ -51,6 +54,11 @@ namespace MinoxBeard.Views
         private async void TapGestureRecognizer_Tapped_2(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
+        }
+
+        private async void Button_Pressed(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new MessageModal("example"), true);
         }
     }
 }

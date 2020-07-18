@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MinoxBeard.Views.MessageModal" 
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <Frame CornerRadius="25" 
+           HorizontalOptions="Center" 
+           VerticalOptions="Center"
+           HasShadow="True"
+           IsClippedToBounds="True"
+           Padding="0">
+        <StackLayout WidthRequest="200" Margin="12" Padding="24" Spacing="24" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White">
+            <Label Text="More Information"
+               TextColor="Blue"
+               TextDecorations="Underline"
+               HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                      CommandParameter="https://www.beardwiki.com/minoxidil-faq" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Button HeightRequest="50" WidthRequest="100" Clicked="OkayClicked" BackgroundColor="BlueViolet" CornerRadius="25" TextColor="White" HorizontalOptions="FillAndExpand" Text="Okay"></Button>
+        </StackLayout>
+    </Frame>
+ </pages:PopupPage>
