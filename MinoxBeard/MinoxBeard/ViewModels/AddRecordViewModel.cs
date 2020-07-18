@@ -38,7 +38,7 @@ namespace MinoxBeard.ViewModels
             set { _note = value; NotifyPropertyChanged("Note"); }
         }
 
-        public async Task SaveUsage()
+        public async Task<bool> SaveUsage()
         {
             DateTime dateTime = DateTime.Now;
             var timeApp = "";
@@ -78,11 +78,15 @@ namespace MinoxBeard.ViewModels
                 ApplicationType = string.Empty;
                 Note = string.Empty;
                 await PopupNavigation.Instance.PushAsync(new MessageModal("Added Record"), true);
+                //RecordViewModel recordViewModel = new RecordViewModel();
+                //recordViewModel.GetDbUses();
+                return true;
 
             }
             else
             {
                 await PopupNavigation.Instance.PushAsync(new MessageModal("Whoops!! Please try again"), true);
+                return false;
             }
         }
     }

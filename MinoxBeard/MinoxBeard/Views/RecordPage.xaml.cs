@@ -28,10 +28,10 @@ namespace MinoxBeard.Views
         {
             await PopupNavigation.Instance.PushAsync(new MessageModal("This feature is coming soon"), true);
         }
-        private async Task LoadUsage()
+        public async Task LoadUsage()
         {
-            var holder = _recordViewModel.GetDbUses();
-            if(holder == null)
+            await _recordViewModel.GetDbUses();
+            if(_recordViewModel.Count == 0)
                 _recordViewModel.Usages = _recordViewModel.GetUses();
             else
                 _recordViewModel.Usages = await _recordViewModel.GetDbUses();

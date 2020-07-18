@@ -29,15 +29,16 @@ namespace MinoxBeard.ViewModels
             };
         }
 
-      
+        public int Count { get; set; }
 
         public async Task<ObservableCollection<UsageModel>> GetDbUses()
         {
             //Get All Uses  
             var usageList = await App.SQLiteDb.GetItemsAsync();
             ObservableCollection<UsageModel> myCollection = new ObservableCollection<UsageModel>(usageList as List<UsageModel>);
-            if (usageList != null || usageList.Count > 0)
+            if (usageList != null && usageList.Count > 0)
             {
+                Count = usageList.Count;
                 Usages = myCollection;
                 return Usages;
             }

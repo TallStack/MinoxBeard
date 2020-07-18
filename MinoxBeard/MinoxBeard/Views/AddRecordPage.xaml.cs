@@ -25,8 +25,13 @@ namespace MinoxBeard.Views
 
         async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await _addrecordViewModel.SaveUsage();
+            var check = await _addrecordViewModel.SaveUsage();
             BindingContext = _addrecordViewModel;
+            //TODO: fix for collection refresh 
+            if(check)
+                await Navigation.PushAsync(new RecordPage());
+            
+           
         }
     }
 }
