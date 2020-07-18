@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace MinoxBeard.Views
@@ -29,7 +30,11 @@ namespace MinoxBeard.Views
         }
         private async Task LoadUsage()
         {
-            _recordViewModel.Usages = _recordViewModel.GetUses();
+            var holder = _recordViewModel.GetDbUses();
+            if(holder == null)
+                _recordViewModel.Usages = _recordViewModel.GetUses();
+            else
+                _recordViewModel.Usages = await _recordViewModel.GetDbUses();
             BindingContext = _recordViewModel;
 
         }
@@ -65,6 +70,11 @@ namespace MinoxBeard.Views
                 await CloseAnimation(detailsView);
                 await CloseAnimation(imgView);
             }
+        }
+
+        async void ImageButton_Pressed_1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddRecordPage());
         }
     }
 }

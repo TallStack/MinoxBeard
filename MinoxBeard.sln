@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinoxBeard.Android", "Minox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinoxBeard.iOS", "MinoxBeard\MinoxBeard.iOS\MinoxBeard.iOS.csproj", "{EC750B98-1B44-44B1-BDB5-66FF230035DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinoxBeard", "MinoxBeard\MinoxBeard\MinoxBeard.csproj", "{ECE1677E-A092-434F-9CDF-2007F83DAB4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinoxBeard", "MinoxBeard\MinoxBeard\MinoxBeard.csproj", "{ECE1677E-A092-434F-9CDF-2007F83DAB4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
