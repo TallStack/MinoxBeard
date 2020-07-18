@@ -24,6 +24,10 @@
                       Icon="routine">
             <views:RoutinePage />
         </ShellContent>
+        <ShellContent Title="Record"
+                      Icon="addicon">
+            <views:RecordPage />
+        </ShellContent>
         <ShellContent Title="Essentials"
                       Icon="items">
             <views:EssentialsPage />
@@ -45,6 +49,12 @@
             <views:RoutinePage/>
         </ShellContent>
     </FlyoutItem>
+    <FlyoutItem Title="Record Usage"
+                Icon="addicon">
+        <ShellContent >
+            <views:RecordPage/>
+        </ShellContent>
+    </FlyoutItem>
     <FlyoutItem Title="Essentials"
                 Icon="items">
         <ShellContent >
@@ -57,6 +67,11 @@
             <views:FaqsPage/>
         </ShellContent>
     </FlyoutItem>
+    
 
+    <!--<MenuItem Text="About"
+               />
+    <MenuItem Text="Donate to Us"
+             />-->
 
 </Shell>
