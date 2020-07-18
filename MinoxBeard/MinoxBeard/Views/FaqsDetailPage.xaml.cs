@@ -58,7 +58,7 @@ namespace MinoxBeard.Views
 
         private async void Button_Pressed(object sender, EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new MessageModal("example"), true);
+            await PopupNavigation.Instance.PushAsync(new MessageModal("More Information"), true);
         }
     }
 }

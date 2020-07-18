@@ -14,7 +14,11 @@ namespace MinoxBeard.Views
         public MessageModal(string Message)
         {
             InitializeComponent();
-            //MessageTxt.Text = Message;
+            if(Message != "")
+            {
+                MessageTxt.Text = Message;
+            }
+            
         }
 
         private async void OkayClicked(object sender, System.EventArgs e)

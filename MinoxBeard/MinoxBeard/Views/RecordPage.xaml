@@ -33,7 +33,7 @@
                 </Expander.Header>
                 <StackLayout Spacing="30" Margin="0,20">
                     <ImageButton Source="edit" Rotation="180" WidthRequest="30" HeightRequest="30" BackgroundColor="Transparent"/>
-                    <ImageButton Source="camera" Rotation="180"  WidthRequest="30" HeightRequest="30" BackgroundColor="Transparent"/>
+                    <ImageButton Source="camera" Rotation="180"  WidthRequest="30" HeightRequest="30" BackgroundColor="Transparent" Pressed="ImageButton_Pressed"/>
                 </StackLayout>
             </Expander>
    

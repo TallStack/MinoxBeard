@@ -13,7 +13,8 @@
            IsClippedToBounds="True"
            Padding="0">
         <StackLayout WidthRequest="200" Margin="12" Padding="24" Spacing="24" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White">
-            <Label Text="More Information"
+            <Label Text=""
+                   x:Name="MessageTxt"
                TextColor="Blue"
                TextDecorations="Underline"
                HorizontalOptions="Center">

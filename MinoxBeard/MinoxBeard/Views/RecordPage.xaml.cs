@@ -1,5 +1,6 @@
 ﻿using MinoxBeard.Helpers;
 using MinoxBeard.ViewModels;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,11 @@ namespace MinoxBeard.Views
             _recordViewModel = ViewModelLocator.RecordViewModel;
             InitializeComponent();
             BindingContext = _recordViewModel;
+        }
+
+        async void ImageButton_Pressed(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new MessageModal("This feature is coming soon"), true);
         }
     }
 }
