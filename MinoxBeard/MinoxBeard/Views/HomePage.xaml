@@ -25,7 +25,7 @@
                         HorizontalOptions="CenterAndExpand"
                         HorizontalTextAlignment="Center"
                         Text="Beard on Brothers!"
-                        TextColor="Goldenrod"
+                        TextColor="Gold"
                         VerticalOptions="Center" />
                     <Grid Margin="5" ColumnSpacing="20" RowSpacing="30">
                         <Grid.RowDefinitions>

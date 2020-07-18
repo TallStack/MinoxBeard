@@ -19,6 +19,13 @@ namespace MinoxBeard.ViewModels
             }
         }
 
-        //public ObservableCollection<Expander> Images { get; set; }
+        public ObservableCollection<UsageModel> Usages { get; set; }
+        public ObservableCollection<UsageModel> GetUses()
+        {
+            return new ObservableCollection<UsageModel>
+            {
+                new UsageModel { Title = "No record Uses yet", Image = "header", Venue = "Add your first use now", Duration = "", Date = DateTime.Now, Description = "Nothing to show here"}
+            };
+        }
     }
 }
