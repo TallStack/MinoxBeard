@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MinoxBeard.Helpers;
+using MinoxBeard.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,12 @@ namespace MinoxBeard.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordPage : ContentPage
     {
+        private RecordViewModel _recordViewModel;
         public RecordPage()
         {
+            _recordViewModel = ViewModelLocator.RecordViewModel;
             InitializeComponent();
+            BindingContext = _recordViewModel;
         }
     }
 }

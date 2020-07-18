@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using CommonServiceLocator;
+using MinoxBeard.ViewModels;
 
 namespace MinoxBeard.Helpers
 {
     public static class ViewModelLocator
     {
 
-        //public static WebapiViewModel WebapiViewModel => ServiceLocator.Current.GetInstance<WebapiViewModel>();
+        public static RecordViewModel RecordViewModel => ServiceLocator.Current.GetInstance<RecordViewModel>();
         
 
     }
