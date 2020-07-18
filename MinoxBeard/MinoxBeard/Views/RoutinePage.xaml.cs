@@ -16,30 +16,11 @@ namespace MinoxBeard.Views
         public RoutinePage()
         {
             InitializeComponent();
-            AdmobControl admobControl = new AdmobControl()
-            {
-                AdUnitId = AppConstants.BannerId
-               // BackgroundColor = Color.Red
-            };
-            Label adLabel = new Label() { Text = "Ads will display here", HorizontalOptions = LayoutOptions.CenterAndExpand, VerticalOptions = LayoutOptions.CenterAndExpand };
+        }
 
-            Button ShowAd = new Button() { Text = "Show Ads", HorizontalOptions = LayoutOptions.CenterAndExpand, VerticalOptions = LayoutOptions.CenterAndExpand };
-            ShowAd.Clicked += ShowAd_Clicked;
-
-            Content = new StackLayout()
-            {
-                Children =
-                {
-                    adLabel, ShowAd, admobControl
-                }
-            };
-
-            async void ShowAd_Clicked(object sender, EventArgs e)
-            {
-                await DependencyService.Get<IAdmobInterstitialAds>().Display(AppConstants.InterstitialAdId);
-            }
-
-
+        async void Button_Clicked(object sender, EventArgs e)
+        {
+            await DependencyService.Get<IAdmobInterstitialAds>().Display(AppConstants.InterstitialAdId);
         }
     }
 }

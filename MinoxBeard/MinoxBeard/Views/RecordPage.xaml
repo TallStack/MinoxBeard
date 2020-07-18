@@ -6,6 +6,7 @@
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              Title="Record Usage"
+             BackgroundColor="#1a2647"
              x:Class="MinoxBeard.Views.RecordPage">
     <Grid>
         <!--<CarouselView ItemsSource="{Binding images}" Margin="20">

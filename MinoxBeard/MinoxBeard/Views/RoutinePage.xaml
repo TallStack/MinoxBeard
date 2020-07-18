@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:MinoxBeard.Controls"
              mc:Ignorable="d"
              x:Class="MinoxBeard.Views.RoutinePage"
+             BackgroundColor="#1a2647"
              Title="Daily Routine">
-    <ContentPage.Content>
-      
-    </ContentPage.Content>
+    <StackLayout>
+        <Label Text="Ads will display here" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Gold"></Label>
+        <Button Text="Show Ads" Clicked="Button_Clicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Button>
+        <controls:AdmobControl AdUnitId="ca-app-pub-5452051705648807/8530120426"></controls:AdmobControl>
+    </StackLayout>
 </ContentPage>
