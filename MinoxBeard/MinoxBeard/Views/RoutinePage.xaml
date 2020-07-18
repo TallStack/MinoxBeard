@@ -4,13 +4,147 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:MinoxBeard.Controls"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="MinoxBeard.Views.RoutinePage"
              BackgroundColor="#1a2647"
              Title="Daily Routine">
-    <StackLayout>
-        <Label Text="Ads will display here" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Gold"></Label>
-        <Button Text="Show Ads" Clicked="Button_Clicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Button>
-        <controls:AdmobControl AdUnitId="ca-app-pub-5452051705648807/8530120426"></controls:AdmobControl>
-    </StackLayout>
+    <Grid>
+    <Grid BackgroundColor="#F3F5F9" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid BackgroundColor="#455399" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Margin="0,-40,0,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label TextColor="Gold" FontSize="40" HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Keep " FontSize="40" FontAttributes="Bold"/>
+                                <Span Text="Going"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Text="Be Consistent | Be Patient" TextColor="White" FontSize="15" HorizontalTextAlignment="Center" Margin="0,-10,0,0"/>
+            </StackLayout>
+        </Grid>
+        <yummy:PancakeView Grid.Row="1" HasShadow="True" HeightRequest="80" Margin="0,-40,0,0" 
+                        HorizontalOptions="Center">
+            <Grid ColumnSpacing="0" HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <BoxView Grid.RowSpan="2" WidthRequest="80" BackgroundColor="#00C6AE"/>
+                <BoxView Grid.Column="1" Grid.RowSpan="2" WidthRequest="80" BackgroundColor="Wheat"/>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="☾" TextColor="DarkBlue" FontSize="36" HorizontalOptions="Center"/>
+                    <Label Text="Night" TextColor="#455399" FontSize="12" HorizontalOptions="Center" Margin="0,-10,0,0"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="☼" TextColor="#Yellow" FontSize="36" HorizontalOptions="Center"/>
+                    <Label Text="Morning" TextColor="#455399" FontSize="12" HorizontalOptions="Center" Margin="0,-10,0,0"/>
+                </StackLayout>
+            </Grid>
+            
+            
+        </yummy:PancakeView>
+       
+        <CollectionView Grid.Row="2" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                        SelectionMode="None" ItemsSource="{Binding MyAgenda}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <yummy:PancakeView HasShadow="True" BackgroundColor="White" VerticalOptions="StartAndExpand" 
+                                    HorizontalOptions="FillAndExpand">
+                        <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <BoxView BackgroundColor="{Binding Color}" WidthRequest="3" HorizontalOptions="Start"
+                                     VerticalOptions="FillAndExpand"/>
+                            <Expander Grid.Column="1">
+                                <Expander.Header>
+                                    <Grid HorizontalOptions="FillAndExpand">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="3.5*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                                            <Label Text="{Binding Date, StringFormat='{0:dd}'}" TextColor="Black" FontSize="27" 
+                                                   HorizontalOptions="Center"/>
+                                            <Label Text="{Binding Date, StringFormat='{0:MMMM}'}" TextColor="Black" FontSize="10" 
+                                                   HorizontalOptions="Center" Margin="0,-10,0,0"/>
+                                        </StackLayout>
+                                        <BoxView Grid.Column="1" BackgroundColor="#F2F4F8" WidthRequest="1" HorizontalOptions="Start" 
+                                                 VerticalOptions="FillAndExpand"/>
+                                        <StackLayout Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center" Margin="20">
+                                            <Label Text="{Binding Topic}" TextColor="Black" FontSize="15"/>
+                                            <Label Text="{Binding Duration}" TextColor="#2F3246" FontSize="12" Margin="0,-10,0,0"/>
+                                        </StackLayout>
+                                    </Grid>
+                                </Expander.Header>
+                                <Grid HorizontalOptions="FillAndExpand">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="3.5*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <BoxView Grid.Column="1" BackgroundColor="#F2F4F8" WidthRequest="1" HorizontalOptions="Start" 
+                                             VerticalOptions="FillAndExpand"/>
+                                    <StackLayout Grid.Column="2" Spacing="10">
+                                        <Label Text="SPEAKERS" TextColor="Black" Opacity="0.5" FontSize="10" Margin="20,0"/>
+                                        <StackLayout BindableLayout.ItemsSource="{Binding Speakers}" HorizontalOptions="Start" VerticalOptions="Center" Margin="20,0,0,20">
+                                            <BindableLayout.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Label TextColor="#2F3246" FontSize="12">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <FormattedString.Spans>
+                                                                    <Span Text="{Binding Time}"/>
+                                                                    <Span Text=" - "/>
+                                                                    <Span Text="{Binding Name}" FontAttributes="Bold"/>
+                                                                </FormattedString.Spans>
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                                </DataTemplate>
+                                            </BindableLayout.ItemTemplate>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Grid>
+                            </Expander>
+                        </Grid>
+                    </yummy:PancakeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+    </Grid>
+        <yummy:PancakeView HorizontalOptions="End" VerticalOptions="End" Margin="30" CornerRadius="40" Padding="15">
+            <yummy:PancakeView.BackgroundGradientStops>
+                <yummy:GradientStop Color="Purple" Offset="0"/>
+                <yummy:GradientStop Color="DarkBlue" Offset="1"/>
+            </yummy:PancakeView.BackgroundGradientStops>
+            <Expander Rotation="180" HorizontalOptions="Start" VerticalOptions="End">
+                <Expander.Header>
+                    <Image Source="addbtn" WidthRequest="30" HeightRequest="30" Rotation="180">
+                    </Image>
+                </Expander.Header>
+            </Expander>
+
+        </yummy:PancakeView>
+    </Grid>
+
 </ContentPage>
