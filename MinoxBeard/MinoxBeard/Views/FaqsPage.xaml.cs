@@ -33,11 +33,15 @@ namespace MinoxBeard.Views
 
         private async void ItemsListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             if (e.CurrentSelection.Count == 0)
                 return;
             if (!(e.CurrentSelection.First() is FaqItem item))
                 return;
-
+            if (AppConstants.ShowAds)
+            {
+                await DependencyService.Get<IAdmobInterstitialAds>().Display(AppConstants.InterstitialAdId);
+            }
             await Navigation.PushAsync(new FaqsDetailPage(new FaqDetailViewModel(item)));
 
             // Manually deselect item.

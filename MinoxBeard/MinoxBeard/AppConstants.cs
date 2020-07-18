@@ -47,8 +47,21 @@ namespace MinoxBeard
                 }
             }
         }
+        private static int _counter;
+        public static bool ShowAds
+        {
+            get
+            {
+                _counter++;
+                if(_counter % 6 == 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
     }
-
+    
     static class IconFonts
     {
         public const string Heart = "\uf2d1";
