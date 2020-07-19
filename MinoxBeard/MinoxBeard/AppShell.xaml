@@ -17,7 +17,7 @@
         
             <ShellContent Title="Home"
                           Icon="home">
-                <views:HomePage />
+                <views:LandingPage />
             </ShellContent>
            
         <ShellContent Title="Routine"
@@ -40,7 +40,7 @@
     <FlyoutItem Title="Home"
                 Icon="home">
         <ShellContent>
-            <views:HomePage/>
+            <views:LandingPage/>
         </ShellContent>
     </FlyoutItem>
     <FlyoutItem Title="Routine"

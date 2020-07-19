@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MinoxBeard.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddRoutinePage : ContentPage
+    public partial class LandingPage : ContentPage
     {
-        public AddRoutinePage()
+        public LandingPage()
         {
             InitializeComponent();
-        }
-
-        async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new HomePage());
         }
     }
 }
