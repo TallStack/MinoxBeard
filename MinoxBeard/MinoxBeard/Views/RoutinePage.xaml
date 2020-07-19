@@ -139,8 +139,8 @@
             </yummy:PancakeView.BackgroundGradientStops>
             <Expander Rotation="180" HorizontalOptions="Start" VerticalOptions="End">
                 <Expander.Header>
-                    <Image Source="addbtn" WidthRequest="30" HeightRequest="30" Rotation="180">
-                    </Image>
+                    <ImageButton Pressed="ImageButton_Pressed" Source="addicon" WidthRequest="30" HeightRequest="30" Rotation="180">
+                    </ImageButton>
                 </Expander.Header>
             </Expander>
 
