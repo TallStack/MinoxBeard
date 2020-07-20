@@ -4,6 +4,7 @@
        xmlns:views="clr-namespace:MinoxBeard.Views"
        xmlns:controls="clr-namespace:MinoxBeard.Controls"
        FlyoutBackgroundColor="#2c417d"
+       Shell.TabBarTitleColor="White"
        FlyoutBackgroundImageAspect="AspectFill"
        FlyoutHeaderBehavior="CollapseOnScroll"
        BackgroundColor="#2c417d"
