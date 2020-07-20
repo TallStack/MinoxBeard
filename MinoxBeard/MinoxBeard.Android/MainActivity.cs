@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Gms.Ads;
+using MediaManager;
 
 namespace MinoxBeard.Droid
 {
@@ -22,6 +23,7 @@ namespace MinoxBeard.Droid
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            CrossMediaManager.Current.Init(this);
             MobileAds.Initialize(ApplicationContext, AppConstants.AppId);
             LoadApplication(new App());
         }
