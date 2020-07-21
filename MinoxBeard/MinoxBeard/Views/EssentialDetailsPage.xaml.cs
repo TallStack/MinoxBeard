@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MinoxBeard.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EssentialsPage : ContentPage
+    public partial class EssentialDetailsPage : ContentPage
     {
-        public EssentialsPage()
+        public EssentialDetailsPage()
         {
             InitializeComponent();
-        }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            moviesColView.SelectedItem = null;
         }
     }
 }
