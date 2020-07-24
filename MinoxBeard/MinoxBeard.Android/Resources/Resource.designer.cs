@@ -19041,25 +19041,28 @@ namespace MinoxBeard.Droid
 			public const int photo = 2131165560;
 			
 			// aapt resource value: 0x7F070179
-			public const int Prev = 2131165561;
+			public const int play = 2131165561;
 			
 			// aapt resource value: 0x7F07017A
-			public const int routine = 2131165562;
+			public const int Prev = 2131165562;
 			
 			// aapt resource value: 0x7F07017B
-			public const int splashscreenads = 2131165563;
+			public const int routine = 2131165563;
 			
 			// aapt resource value: 0x7F07017C
-			public const int tooltip_frame_dark = 2131165564;
+			public const int splashscreenads = 2131165564;
 			
 			// aapt resource value: 0x7F07017D
-			public const int tooltip_frame_light = 2131165565;
+			public const int tooltip_frame_dark = 2131165565;
 			
 			// aapt resource value: 0x7F07017E
-			public const int Up = 2131165566;
+			public const int tooltip_frame_light = 2131165566;
 			
 			// aapt resource value: 0x7F07017F
-			public const int wiki = 2131165567;
+			public const int Up = 2131165567;
+			
+			// aapt resource value: 0x7F070180
+			public const int wiki = 2131165568;
 			
 			static Drawable()
 			{

@@ -28,20 +28,20 @@
                         <yummy:GradientStop Color="Transparent" Offset="1"/>
                     </yummy:GradientStopCollection>
                 </yummy:PancakeView.BackgroundGradientStops>
-                <yummy:PancakeView HasShadow="True" Margin="0,0,0,50" BackgroundColor="#E22963" HeightRequest="40" WidthRequest="150" 
+                <yummy:PancakeView HasShadow="True" Margin="0,0,0,50" BackgroundColor="Purple" HeightRequest="40" WidthRequest="150" 
                                 CornerRadius="20" HorizontalOptions="Center" VerticalOptions="End">
                     <yummy:PancakeView.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding PlayCommand}"/>
                     </yummy:PancakeView.GestureRecognizers>
                     <StackLayout Orientation="Horizontal" Spacing="15" HorizontalOptions="Center">
-                        <Image Source="play.png" WidthRequest="14" HeightRequest="16" VerticalOptions="Center"/>
+                        <Image Source="play" WidthRequest="14" HeightRequest="16" VerticalOptions="Center"/>
                         <Label Text="PLAY" TextColor="White" FontSize="13" VerticalOptions="Center"/>
                     </StackLayout>
                 </yummy:PancakeView>
             </yummy:PancakeView>
         </Grid>
-        <StackLayout Grid.Row="1" Spacing="10" Margin="20,5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Label Text="MY WATCH LIST" TextColor="White" FontAttributes="Bold" />
+        <StackLayout Grid.Row="1" Spacing="10" Margin="5,5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#1a2647">
+            <Label Text="BROWSE VIDEOS" TextColor="Gold" FontAttributes="Bold" />
             <CollectionView x:Name="moviesColView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
                                 HorizontalScrollBarVisibility="Never"
                         ItemsSource="{Binding WatchList}" SelectedItem="{Binding SelectedMovie}"

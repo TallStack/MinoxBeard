@@ -68,7 +68,7 @@ namespace MinoxBeard.ViewModels
         private async void GetOnlineData()
         {
             var client = new HttpClient();
-            var result = await client.GetStringAsync("https://devcrux.com/movies.json");
+            var result = await client.GetStringAsync("https://tallstack.github.io/Videos.json");
             WatchList = JsonConvert.DeserializeObject<ObservableCollection<VideoModel>>(result);
         }
     }
