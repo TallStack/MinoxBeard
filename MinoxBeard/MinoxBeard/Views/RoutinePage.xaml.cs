@@ -46,7 +46,8 @@ namespace MinoxBeard.Views
         //    };
         //}
 
-        async void ImageButton_Pressed(object sender, EventArgs e)
+
+        async void ImageButton_Pressed_1(object sender, EventArgs e)
         {
             if (AppConstants.ShowAds)
             {

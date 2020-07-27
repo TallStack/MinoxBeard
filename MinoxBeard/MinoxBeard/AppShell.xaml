@@ -70,9 +70,29 @@
     </FlyoutItem>
     
 
-    <!--<MenuItem Text="About"
-               />
-    <MenuItem Text="Donate to Us"
-             />-->
+    <MenuItem Text="About"
+               IconImageSource="about"
+              Command="{Binding NavigateCommand}" CommandParameter="about"/>
+    <MenuItem Text="Settings"
+               IconImageSource="settings"
+              Command="{Binding NavigateCommand}" CommandParameter="settings"/>
+    
 
 </Shell>
+<!--<Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>-->

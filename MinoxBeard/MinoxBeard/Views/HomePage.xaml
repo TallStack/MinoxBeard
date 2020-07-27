@@ -7,6 +7,8 @@
              mc:Ignorable="d"
              x:Class="MinoxBeard.Views.HomePage"
              Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
              Shell.NavBarHasShadow="True"
              Shell.TitleColor="Gold"
              Title="Home">

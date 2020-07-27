@@ -139,9 +139,18 @@
             </yummy:PancakeView.BackgroundGradientStops>
             <Expander Rotation="180" HorizontalOptions="Start" VerticalOptions="End">
                 <Expander.Header>
-                    <ImageButton Pressed="ImageButton_Pressed" Source="addicon" WidthRequest="30" HeightRequest="30" Rotation="180">
-                    </ImageButton>
+                    <Image Source="addbtn" WidthRequest="30" HeightRequest="30" Rotation="180">
+                        <Image.Triggers>
+                            <DataTrigger TargetType="Image" Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
+                                         Value="True">
+                                <Setter Property="Source" Value="close" />
+                            </DataTrigger>
+                        </Image.Triggers>
+                    </Image>
                 </Expander.Header>
+                <StackLayout Spacing="30" Margin="0,20">
+                    <ImageButton Source="edit" Rotation="180" WidthRequest="30" HeightRequest="30" BackgroundColor="Transparent" Pressed="ImageButton_Pressed_1"/>
+                </StackLayout>
             </Expander>
 
         </yummy:PancakeView>
