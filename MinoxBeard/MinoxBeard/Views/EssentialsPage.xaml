@@ -43,12 +43,29 @@
         <StackLayout Grid.Row="1" Spacing="10" Margin="5,5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#1a2647">
             <Label Text="BROWSE VIDEOS" TextColor="Gold" FontAttributes="Bold" />
             <CollectionView x:Name="moviesColView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
-                                HorizontalScrollBarVisibility="Never"
+                                HorizontalScrollBarVisibility="Never" 
                         ItemsSource="{Binding WatchList}" SelectedItem="{Binding SelectedMovie}"
                         SelectionMode="Single" SelectionChangedCommand="{Binding SelectionCommand}">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal" ItemSpacing="20"/>
                 </CollectionView.ItemsLayout>
+                <CollectionView.EmptyView>
+                    <StackLayout>
+                        <Label Text="Please connect to the Internet"
+                       Margin="10,25,10,10"
+                       FontAttributes="Bold"
+                       FontSize="18"
+                               TextColor="Gold"
+                       HorizontalOptions="Fill"
+                       HorizontalTextAlignment="Center" />
+                        <Label Text="For Videos to Load"
+                       FontAttributes="Bold"
+                       FontSize="18"
+                               TextColor="Gold"
+                       HorizontalOptions="Fill"
+                       HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </CollectionView.EmptyView>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid WidthRequest="135" HeightRequest="195" Padding="0,10">

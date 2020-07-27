@@ -1,6 +1,7 @@
 ﻿using MinoxBeard.Models;
 using MinoxBeard.Views;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -67,9 +68,18 @@ namespace MinoxBeard.ViewModels
 
         private async void GetOnlineData()
         {
-            var client = new HttpClient();
-            var result = await client.GetStringAsync("https://tallstack.github.io/Videos.json");
-            WatchList = JsonConvert.DeserializeObject<ObservableCollection<VideoModel>>(result);
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                //You are offline, notify the user
+                
+            }
+            else
+            {
+                var client = new HttpClient();
+                var result = await client.GetStringAsync("https://tallstack.github.io/Videos.json");
+                WatchList = JsonConvert.DeserializeObject<ObservableCollection<VideoModel>>(result);
+            }
+           
         }
     }
 }
