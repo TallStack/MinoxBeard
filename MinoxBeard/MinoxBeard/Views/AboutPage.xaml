@@ -28,7 +28,7 @@
                         <Label Text="Minoxidil Beard growth journey" FontSize="12" TextColor="#2C3E50" HorizontalOptions="CenterAndExpand"/>
                         <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="CenterAndExpand">
                             
-                            <Label Text="Daily Usage tracker and your #1 Beard companion" TextColor="#34495E" FontSize="14" FontAttributes="Bold" VerticalOptions="Center"/>  
+                            <Label Text="Daily Usage tracker and your #1 Beard App" TextColor="#34495E" FontSize="14" FontAttributes="Bold" VerticalOptions="Center"/>  
                         </StackLayout>
                     </StackLayout>
                     <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
@@ -37,9 +37,9 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                        <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="15" HorizontalOptions="CenterAndExpand">
                             <Image Source="BeardIcon" WidthRequest="45" HeightRequest="45" HorizontalOptions="Center"/>
-                            <Label Text="By ADS Developers" TextColor="#2C3E50" FontSize="12" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Text="ADS Developers" TextColor="#2C3E50" FontSize="12" HorizontalOptions="Start" FontAttributes="Bold"/>
                         </StackLayout>
                     </Grid>
                 </Grid>

@@ -115,7 +115,7 @@
 
             <StackLayout Padding="20" VerticalOptions="Center">
                 <Label Text="Be Consistent" TextColor="Gold"/>
-                <Label Text="Be Patient | Beard on Brothers" TextColor="Gold" />
+                <Label Text="Be Patient" TextColor="Gold" />
             </StackLayout>
 
             <Button
