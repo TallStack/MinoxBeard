@@ -37,13 +37,20 @@
                         Elevation="3"
                         HeightRequest="50"
                             WidthRequest="20">
-                            <renderers:BorderlessEntry
-                            FontSize="25"
-                            ClearButtonVisibility="WhileEditing"
-                            Keyboard="Email"
-                            TextColor="White"
-                            Placeholder="Used Dermaroll"
-                            Text="{Binding ApplicationType}"/>
+                            <Picker 
+                               Title="Select Application Type"
+                               TitleColor="Purple"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               SelectedItem="{Binding ApplicationType}">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Minoxidil Application</x:String>
+                                        <x:String>Dermaroll</x:String>
+                                        <x:String>No Use</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
                         </yummy:PancakeView>
                     </StackLayout>
                     <StackLayout Spacing="20">
