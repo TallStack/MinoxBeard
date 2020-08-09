@@ -124,6 +124,136 @@ namespace MinoxBeard.Services
                     FullDescription = "Minoxidil is mixed with an alcohol carrier and propylene gylcol, which are what is drying your face out. First, try to make it to four hours of having the application on, then wash or rinse your face. Afterward, feel free to apply a moisturizer. The reason you want to apply your moisturizer after washing or rinsing your face is because you want it clean and flake-free. Water will help with the absorption of the oils contained in your moisturizing products. If you cannot get past dryness, you may want to opt for foam. Very few individuals get dry face from foam minoxidil, and most do not need to moisturize whatsoever after the four hours have elapsed. Rinse your face well after the application time has elapsed, then apply your moisturizer. Switch to foam if it gets to be too bad with liquid. ",
                     Subtitle = "answer",
                     Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "So far, there are two different application forms that are known to the group. One is to mix it with Minoxidil Liquid, the other is to mix it with Nivea Soft cream.",
+                    Text = "How do I use LCLT for beard growth?",
+                    FullDescription = "With both, you should take pure LCLT powder and take about 2% of your carrier substance's weight to mix it in. Keep in mind that LCLT has a pretty strong, fishy smell. You can put some PEO into your Minox or Nivea to fix this. After mixing LCLT into Minox or Nivea, you can use either as you would normally. Minox twice a day, Nivea as needed, although it is recommended to use Nivea with LCLT at least once a day if you're not using Minox + LCLT.",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "It is important to choose a product that contains 100% pure L-Carnitine L-Tartrate. This is usually the case with LCLT powder. ",
+                    Text = "Which LCLT products can I use?",
+                    FullDescription = "Capsules (and some powder brands!) mostly contain extra ingredients like silicon dioxide or magnesium salts which are supposed to prevent the binding of LCLT to other substances. Since this is exactly what we're trying to achieve, it's best to avoid products that contain other ingredients than LCLT itself, even though they might work just as fine it'd be best to stay safe and choose pure LCLT. ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "Say you're derma rolling 2 days a week with a 0.5mm, then follow this schedule: ",
+                    Text = "Is there a schedule I should be following?",
+                    FullDescription = "Monday: AM minox | PM Minox then wait 4 hours, roll. Tuesday: AM n/a | PM apply minox. Wednesday: AM minox | PM minox. Thursday: AM minox | PM minox then wait 4 hours, roll and just repeat ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "Run it under hot water to get any dead skin/other materials off, then leave in an alcohol bath for about 5 minutes. ",
+                    Text = "How do I disinfect/clean my dermaroller?",
+                    FullDescription = "Let it completely dry before using. You can use any antiseptic; isopropyl alcohol is the cheapest and will get the job done. ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "While it's true that dermarolling will increase absorption of minoxidil, that is not the reason we do it, and it is an incredibly irresponsible thing to do. ",
+                    Text = "Derma rolling to increase minoxidil absorption?",
+                    FullDescription = "There is a common misconception that people tend to have with dermarolling, where they think that the purpose of it is to increase absorption of minoxidil. This is not the case. As stated above, we dermaroll to induce collagen synthesis, NOT to increase absorption. Not only will applying minoxidil directly after microneedling negate the purpose of doing it, you're also putting yourself in a position where side effects may become prominent. If you are going to derma roll, please wait AT LEAST 24 hours before applying minox.",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "Before: Before using a dermaroller, you must cleanse your face with soap and water (preferably something with antibacterial qualities). This is very important since there is loads of bacteria that are present on your face that could cause a multitude of infections if it gets into your skin.  ",
+                    Text = "What to Do Before/After Using the dermaroller?",
+                    FullDescription = "After: Because dermarolling creates hundreds of tiny micro cuts (to stimulate collagen production), it means that you're exposing your skin to outside germs and bacteria. Think of your face as one giant cut that needs to be protected against infection. That's why it's recommended to use an antibacterial ointment after you dermaroll to prevent this from happening ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "Shaving or trimming low is recommended because the needles need to be able to puncture the skin for dermarolling to work. ",
+                    Text = "Do I have to shave or trim before using the dermaroller?",
+                    FullDescription = "If you have long growth and roll over it, you will only be damaging and pulling hair. Trimming is safer and carries less risk of causing irritation to the skin and hair follicles as opposed to shaving.  ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "1 mm can be used every two - four weeks on the same skin area. ",
+                    Text = "How often can I use the dermaroller?",
+                    FullDescription = "0.2 or 0.25 mm long needles can be used every second day on the same skin area.*(not sufficient for beard growth). 0.5 mm long needles can be used once or twice per week on the same skin area. ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "Dermarolling jump starts the processes of collagen synthesis, something minoxidil inhibits (in vitro). Collagen is extremely vital to skin strength, thickness, and elasticity. ",
+                    Text = "How can it help with your beard?",
+                    FullDescription = "Dermarolling also stimulates your follicles, bringing more nutrients and blood to the area than minoxidil alone. ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "A dermaroller is a product that re-molds the skin by creating thousands of microscopic channels through the skin, increasing the formation of new tissue by activating the body's wound-healing mechanism.  ",
+                    Text = "What is a dermaroller and what does it do?",
+                    FullDescription = "CAUTION: If you decide to use a derma roller, please be advised that it can increase the side effects of minoxidil if used incorrectly. ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "While it is true that DHT is one of the leading causes of hair loss. This is only true for men who are predisposed to male pattern baldness. Men suffering from MPB are sensitive to even normal levels of DHT",
+                    Text = "I Heard DHT Causes Baldness",
+                    FullDescription = "Increasing your DHT levels will not cause you to go bald unless you are already predisposed to losing your hair from MPB. In which case, you're going to lose your hair eventually either way. Whether or not increasing your DHT levels will accelerate hair loss remains to be seen and cannot be answered at this time.  ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "Shaving with a smooth face or trimming to a short length makes treatment easiest and least wasteful of the minoxidil. There is no correlation with shaving and growth results. ",
+                    Text = "Should I Shave or Trim?",
+                    FullDescription = "Remember that balding men are able to keep progress going on their scalps even with all of the hair there. These people also have genetics working against them, as balding is an ongoing, lifelong process. Shaving can help exfoliate the skin by a process known as derma-planing. It's simply straight-edged blade to remove excess dead skin cells. While it can help with exfoliation, shaving can also irritate the skin and can lead to ingrown hairs which can (in rare cases if left untreated) lead to infection.   ",
+                    Subtitle = "answer",
+                    Price = 743
+                },
+                new FaqItem
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Icon = IconFonts.Heart,
+                    Description = "Many of us recommend keeping it “basik.” Don't worry about the supplementation aspect of things. Rather, focus on minoxidil. If you wish to supplement, it's totally fine. But don't assume supplementation will drastically up your gains. ",
+                    Text = "What Supplements Should I Take?",
+                    FullDescription = "You should certainly try to get good nutrients from your diet, but if you believe you may have gaps in nutrition, take a multivitamin. While many people may recommend vitamins like biotin or diatomaceous earth, they will do nothing to improve your facial hair situation. On the other hand, if you're deficient in vitamins, those may very well be of great help to you. Sleep and low stress are big contributors to happy, healthy hair.  ",
+                    Subtitle = "answer",
+                    Price = 743
                 }
             };
         }
