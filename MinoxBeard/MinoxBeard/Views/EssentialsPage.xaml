@@ -12,11 +12,29 @@
     <ContentPage.BindingContext>
         <vm:EssentialViewModel/>
     </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="#1a2647" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <Grid BackgroundColor="Black" RowSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Image Source="{Binding FeaturedMovie.Thumbnail}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" 
                    VerticalOptions="FillAndExpand"/>

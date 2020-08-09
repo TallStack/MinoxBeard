@@ -10,7 +10,6 @@
              mc:Ignorable="d"
              x:Class="MinoxBeard.Views.FaqsPage"
              Title="FAQs">
-
     <StackLayout  BackgroundColor="#1a2647" Padding="15,0,15,0">
         <Grid HeightRequest="130">
             <Grid.ColumnDefinitions>
@@ -20,7 +19,7 @@
             <StackLayout Grid.Column="0" Margin="20">
                 <StackLayout Orientation="Horizontal">
                     <Label
-                        FontSize="25"
+                        FontSize="22"
                         FontAttributes="Bold"
                         TextColor="Gold"
                         Text="Got Any Questions?" />
@@ -47,9 +46,10 @@
                 SelectionChanged="ItemsListView_SelectionChanged"
                 SelectionMode="Single"
                 VerticalOptions="FillAndExpand">
-                <d:CollectionView.ItemsSource>
+            
+                <d:CollectionView.ItemsSource >
                     <x:Array Type="{x:Type models:FaqItem}">
-                        <models:FaqItem
+                        <!--<models:FaqItem
                             Description="This is a description! Lorem ipsum dolor sit amet bla bla bla sdkfl sdk fmlsdf. Her odp åsd æ?"
                             Icon="&#xf2d5;"
                             Price="319"
@@ -71,21 +71,36 @@
                             Description="This is a description!"
                             Icon="&#xf2d5;"
                             Subtitle="amazing"
-                            Text="Experience" />
+                            Text="Experience" />-->
                     </x:Array>
                 </d:CollectionView.ItemsSource>
+                
                 <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="20" Orientation="Vertical" />
+                    
+                    <LinearItemsLayout ItemSpacing="20" Orientation="Vertical"/>
                 </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
+                
+                <CollectionView.ItemTemplate >
+                    
                     <DataTemplate x:DataType="models:FaqItem">
+                        
                         <yummy:PancakeView
                             Margin="10"
                             Padding="10"
                             BackgroundColor="White"
-                            CornerRadius="25"
+                            CornerRadius="8"
                             HeightRequest="120"
                             HorizontalOptions="FillAndExpand">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal" />
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="LightSkyBlue" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
                             <StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label
@@ -132,6 +147,8 @@
 
                             </StackLayout>
                         </yummy:PancakeView>
+                       
+
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

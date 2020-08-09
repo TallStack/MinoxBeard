@@ -53,7 +53,7 @@ namespace MinoxBeard
             get
             {
                 _counter++;
-                if(_counter % 10 == 0)
+                if(_counter % 3 == 0)
                 {
                     return true;
                 }
