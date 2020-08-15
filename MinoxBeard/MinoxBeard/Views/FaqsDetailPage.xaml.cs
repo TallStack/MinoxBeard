@@ -1,4 +1,5 @@
 ﻿using MinoxBeard.ViewModels;
+using Plugin.LocalNotifications;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -58,7 +59,9 @@ namespace MinoxBeard.Views
 
         private async void Button_Pressed(object sender, EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new MessageModal("More Information"), true);
+            //await PopupNavigation.Instance.PushAsync(new MessageModal("More Information"), true);
+            //CrossLocalNotifications.Current.Show("Welcome to Minox Beard", "New Routine Added", 0, DateTime.Now.AddSeconds(5));
+            await Launcher.OpenAsync("https://www.beardwiki.com/minoxidil-faq");
         }
     }
 }

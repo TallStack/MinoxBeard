@@ -7097,6 +7097,7 @@ namespace MinoxBeard.Droid
 			global::MediaManager.Forms.Resource.Styleable.View_paddingEnd = global::MinoxBeard.Droid.Resource.Styleable.View_paddingEnd;
 			global::MediaManager.Forms.Resource.Styleable.View_paddingStart = global::MinoxBeard.Droid.Resource.Styleable.View_paddingStart;
 			global::MediaManager.Forms.Resource.Styleable.View_theme = global::MinoxBeard.Droid.Resource.Styleable.View_theme;
+			global::Plugin.LocalNotifications.Resource.Drawable.plugin_lc_smallicon = global::MinoxBeard.Droid.Resource.Drawable.plugin_lc_smallicon;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_in = global::MinoxBeard.Droid.Resource.Animation.abc_fade_in;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_out = global::MinoxBeard.Droid.Resource.Animation.abc_fade_out;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_grow_fade_in_from_bottom = global::MinoxBeard.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -11157,6 +11158,7 @@ namespace MinoxBeard.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.String.fab_transformation_sheet_behavior = global::MinoxBeard.Droid.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.hide_bottom_view_on_scroll_behavior = global::MinoxBeard.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Android.Resource.String.mtrl_chip_close_icon_content_description = global::MinoxBeard.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Android.Resource.String.overflow_tab_title = global::MinoxBeard.Droid.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Android.Resource.String.password_toggle_content_description = global::MinoxBeard.Droid.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye = global::MinoxBeard.Droid.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Android.Resource.String.path_password_eye_mask_strike_through = global::MinoxBeard.Droid.Resource.String.path_password_eye_mask_strike_through;
@@ -13726,6 +13728,7 @@ namespace MinoxBeard.Droid
 			global::Xamarin.Forms.Platform.Resource.String.fab_transformation_sheet_behavior = global::MinoxBeard.Droid.Resource.String.fab_transformation_sheet_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.hide_bottom_view_on_scroll_behavior = global::MinoxBeard.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
 			global::Xamarin.Forms.Platform.Resource.String.mtrl_chip_close_icon_content_description = global::MinoxBeard.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Xamarin.Forms.Platform.Resource.String.overflow_tab_title = global::MinoxBeard.Droid.Resource.String.overflow_tab_title;
 			global::Xamarin.Forms.Platform.Resource.String.password_toggle_content_description = global::MinoxBeard.Droid.Resource.String.password_toggle_content_description;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye = global::MinoxBeard.Droid.Resource.String.path_password_eye;
 			global::Xamarin.Forms.Platform.Resource.String.path_password_eye_mask_strike_through = global::MinoxBeard.Droid.Resource.String.path_password_eye_mask_strike_through;
@@ -19056,31 +19059,34 @@ namespace MinoxBeard.Droid
 			public const int play = 2131165565;
 			
 			// aapt resource value: 0x7F07017E
-			public const int Prev = 2131165566;
+			public const int plugin_lc_smallicon = 2131165566;
 			
 			// aapt resource value: 0x7F07017F
-			public const int routine = 2131165567;
+			public const int Prev = 2131165567;
 			
 			// aapt resource value: 0x7F070180
-			public const int settings = 2131165568;
+			public const int routine = 2131165568;
 			
 			// aapt resource value: 0x7F070181
-			public const int splashscreenads = 2131165569;
+			public const int settings = 2131165569;
 			
 			// aapt resource value: 0x7F070182
-			public const int tooltip_frame_dark = 2131165570;
+			public const int splashscreenads = 2131165570;
 			
 			// aapt resource value: 0x7F070183
-			public const int tooltip_frame_light = 2131165571;
+			public const int tooltip_frame_dark = 2131165571;
 			
 			// aapt resource value: 0x7F070184
-			public const int Up = 2131165572;
+			public const int tooltip_frame_light = 2131165572;
 			
 			// aapt resource value: 0x7F070185
-			public const int update = 2131165573;
+			public const int Up = 2131165573;
 			
 			// aapt resource value: 0x7F070186
-			public const int wiki = 2131165574;
+			public const int update = 2131165574;
+			
+			// aapt resource value: 0x7F070187
+			public const int wiki = 2131165575;
 			
 			static Drawable()
 			{
@@ -20733,25 +20739,28 @@ namespace MinoxBeard.Droid
 			public const int mtrl_chip_close_icon_content_description = 2131558507;
 			
 			// aapt resource value: 0x7F0D006C
-			public const int password_toggle_content_description = 2131558508;
+			public const int overflow_tab_title = 2131558508;
 			
 			// aapt resource value: 0x7F0D006D
-			public const int path_password_eye = 2131558509;
+			public const int password_toggle_content_description = 2131558509;
 			
 			// aapt resource value: 0x7F0D006E
-			public const int path_password_eye_mask_strike_through = 2131558510;
+			public const int path_password_eye = 2131558510;
 			
 			// aapt resource value: 0x7F0D006F
-			public const int path_password_eye_mask_visible = 2131558511;
+			public const int path_password_eye_mask_strike_through = 2131558511;
 			
 			// aapt resource value: 0x7F0D0070
-			public const int path_password_strike_through = 2131558512;
+			public const int path_password_eye_mask_visible = 2131558512;
 			
 			// aapt resource value: 0x7F0D0071
-			public const int search_menu_title = 2131558513;
+			public const int path_password_strike_through = 2131558513;
 			
 			// aapt resource value: 0x7F0D0072
-			public const int status_bar_notification_info_overflow = 2131558514;
+			public const int search_menu_title = 2131558514;
+			
+			// aapt resource value: 0x7F0D0073
+			public const int status_bar_notification_info_overflow = 2131558515;
 			
 			static String()
 			{
