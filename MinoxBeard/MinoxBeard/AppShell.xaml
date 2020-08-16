@@ -73,10 +73,10 @@
     <MenuItem Text="About"
                IconImageSource="about"
               Command="{Binding NavigateCommand}" CommandParameter="about"/>
-    <!--<MenuItem Text="Settings"
+    <MenuItem Text="Settings"
                IconImageSource="settings"
-              Command="{Binding NavigateCommand}" CommandParameter="settings"/>-->
-    
+              Command="{Binding NavigateCommand}" CommandParameter="settings"/>
+
 
 </Shell>
 <!--<Shell.MenuItemTemplate>

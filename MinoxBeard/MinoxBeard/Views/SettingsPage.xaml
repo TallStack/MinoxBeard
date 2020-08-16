@@ -8,8 +8,9 @@
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              Shell.TabBarIsVisible="False"
              Title="Settings"
+             BackgroundColor="#1a2647"
              x:Class="MinoxBeard.Views.SettingsPage">
-    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <!--<ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
         <StackLayout>
 
@@ -123,5 +124,198 @@
 
             </yummy:PancakeView>
         </StackLayout>
-    </ScrollView>
+    </ScrollView>-->
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout Margin="15,0,15,15">
+
+                    <StackLayout Orientation="Horizontal">
+                  
+                        <StackLayout Margin="10" VerticalOptions="CenterAndExpand">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="26"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="Customize Your App"
+                                TextColor="Gold"
+                                VerticalTextAlignment="Center">
+                                
+                            </Label>
+
+                           
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Margin="0,30,0,0">
+
+                        <!--  Start of Menu Item  -->
+                        <StackLayout Margin="0,5,5,5">
+
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="40"
+                                        HorizontalOptions="StartAndExpand"
+                                        Source="edit"
+                                        WidthRequest="40" />
+                                    <Label
+                                        Margin="15,0,0,0"
+                                        FontSize="18"
+                                        HorizontalOptions="StartAndExpand"
+                                        HorizontalTextAlignment="Start"
+                                        Text="Edit Profile"
+                                        TextColor="Black"
+                                        VerticalTextAlignment="Center">
+                          
+                                    </Label>
+                                </StackLayout>
+
+                                <Image
+                                    Margin="20,0,20,0"
+                                    Aspect="AspectFit"
+                                    HeightRequest="10"
+                                    HorizontalOptions="EndAndExpand"
+                                    Source="more"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="10" />
+
+                                <!--<StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                </StackLayout.GestureRecognizers>-->
+                            </StackLayout>
+
+                        </StackLayout>
+                        <!--  End of Menu Item  -->
+
+                        <!--  Start of Menu Item  -->
+                        <StackLayout Margin="0,5,5,5">
+
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="40"
+                                        HorizontalOptions="StartAndExpand"
+                                        Source="delete"
+                                        WidthRequest="40" />
+                                    <Label
+                                        Margin="15,0,0,0"
+                                        FontSize="18"
+                                        HorizontalOptions="StartAndExpand"
+                                        HorizontalTextAlignment="Start"
+                                        Text="Delete All Routines"
+                                        TextColor="Black"
+                                        VerticalTextAlignment="Center">
+                    
+                                    </Label>
+                                </StackLayout>
+
+                                <Image
+                                    Margin="20,0,20,0"
+                                    Aspect="AspectFit"
+                                    HeightRequest="10"
+                                    HorizontalOptions="EndAndExpand"
+                                    Source="more"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="10" />
+
+                                <!--<StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                </StackLayout.GestureRecognizers>-->
+                            </StackLayout>
+
+                        </StackLayout>
+                        <!--  End of Menu Item  -->
+
+                        <!--  Start of Menu Item  -->
+                        <StackLayout Margin="0,5,5,5">
+
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="40"
+                                        HorizontalOptions="StartAndExpand"
+                                        Source="delete"
+                                        WidthRequest="40" />
+                                    <Label
+                                        Margin="15,0,0,0"
+                                        FontSize="18"
+                                        HorizontalOptions="StartAndExpand"
+                                        HorizontalTextAlignment="Start"
+                                        Text="Delete All Records"
+                                        TextColor="Black"
+                                        VerticalTextAlignment="Center">
+                                       
+                                    </Label>
+                                </StackLayout>
+
+                                <Image
+                                    Margin="20,0,20,0"
+                                    Aspect="AspectFit"
+                                    HeightRequest="10"
+                                    HorizontalOptions="EndAndExpand"
+                                    Source="more"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="10" />
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                        </StackLayout>
+                        <!--  End of Menu Item  -->
+
+                        <!--  Start of Menu Item  -->
+                        <StackLayout Margin="0,5,5,5">
+
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image
+                                        Aspect="AspectFill"
+                                        HeightRequest="40"
+                                        HorizontalOptions="StartAndExpand"
+                                        Source="about"
+                                        WidthRequest="40" />
+                                    <Label
+                                        Margin="15,0,0,0"
+                                        FontSize="18"
+                                        HorizontalOptions="StartAndExpand"
+                                        HorizontalTextAlignment="Start"
+                                        Text="Patch list"
+                                        TextColor="Black"
+                                        VerticalTextAlignment="Center">
+                                        
+                                    </Label>
+                                </StackLayout>
+
+                                <Image
+                                    Margin="20,0,20,0"
+                                    Aspect="AspectFit"
+                                    HeightRequest="10"
+                                    HorizontalOptions="EndAndExpand"
+                                    Source="more"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="10" />
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                        </StackLayout>
+                        <!--  End of Menu Item  -->
+
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -16,5 +16,15 @@ namespace MinoxBeard.Views
         {
             InitializeComponent();
         }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PatchPage());
+        }
+
+        private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            //await DisplayAlert("Title", "Body", "cancel");
+        }
     }
 }

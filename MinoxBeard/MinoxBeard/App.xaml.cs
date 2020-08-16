@@ -17,7 +17,7 @@ namespace MinoxBeard
         public App()
         {
             InitializeComponent();
-            Device.SetFlags(new[] { "Expander_Experimental" });
+            Device.SetFlags(new[] { "Expander_Experimental", "Brush_Experimental" });
             ContainerBuilder _builder = new ContainerBuilder();
             _builder.RegisterInstance(new RecordViewModel()).SingleInstance();
             _builder.RegisterInstance(new AddRecordViewModel()).SingleInstance();
