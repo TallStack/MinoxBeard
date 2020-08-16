@@ -21,10 +21,13 @@ namespace MinoxBeard.Views
         {
             _recordViewModel = ViewModelLocator.RecordViewModel;
             InitializeComponent();
+            
+        }
+        protected override void OnAppearing()
+        {
             LoadUsage();
         }
-
-        async void ImageButton_Pressed(object sender, EventArgs e)
+            async void ImageButton_Pressed(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new MessageModal("This feature is coming soon"), true);
         }

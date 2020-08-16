@@ -96,59 +96,7 @@
                             </Label.GestureRecognizers>
                         </Label>
                     </yummy:PancakeView>
-                    <!--<Label
-                    FontAttributes="None"
-                    FontSize="20"
-                    HorizontalOptions="CenterAndExpand"
-                    Text="Or"
-                    TextColor="#99A1B3" />
-                    <StackLayout Spacing="10" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                        <yummy:PancakeView
-                        BackgroundColor="#FF5A00"
-                        BorderThickness="1"
-                        CornerRadius="20"
-                        Elevation="3"
-                        HeightRequest="60"
-                        HorizontalOptions="Center"
-                        WidthRequest="60">
-                            <Image
-                            Margin="15"
-                            Aspect="AspectFit"
-                            HeightRequest="20"
-                            Source="google"
-                            WidthRequest="20" />
-                        </yummy:PancakeView>
-                        <yummy:PancakeView
-                        BackgroundColor="#4359AC"
-                        BorderThickness="1"
-                        CornerRadius="20"
-                        Elevation="3"
-                        HeightRequest="60"
-                        HorizontalOptions="Center"
-                        WidthRequest="60">
-                            <Image
-                            Margin="15"
-                            Aspect="AspectFit"
-                            HeightRequest="20"
-                            Source="facebook"
-                            WidthRequest="20" />
-                        </yummy:PancakeView>
-                        <yummy:PancakeView
-                        BackgroundColor="#1DA1F2"
-                        BorderThickness="1"
-                        CornerRadius="20"
-                        Elevation="3"
-                        HeightRequest="60"
-                        HorizontalOptions="Center"
-                        WidthRequest="60">
-                            <Image
-                            Margin="15"
-                            Aspect="AspectFit"
-                            HeightRequest="20"
-                            Source="twitter"
-                            WidthRequest="20" />
-                        </yummy:PancakeView>
-                    </StackLayout>-->
+
 
                 </StackLayout>
             </yummy:PancakeView>

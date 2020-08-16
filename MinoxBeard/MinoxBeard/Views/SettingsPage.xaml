@@ -181,9 +181,9 @@
                                     VerticalOptions="CenterAndExpand"
                                     WidthRequest="10" />
 
-                                <!--<StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                                </StackLayout.GestureRecognizers>-->
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" />
+                                </StackLayout.GestureRecognizers>
                             </StackLayout>
 
                         </StackLayout>
@@ -221,9 +221,9 @@
                                     VerticalOptions="CenterAndExpand"
                                     WidthRequest="10" />
 
-                                <!--<StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                                </StackLayout.GestureRecognizers>-->
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                                </StackLayout.GestureRecognizers>
                             </StackLayout>
 
                         </StackLayout>

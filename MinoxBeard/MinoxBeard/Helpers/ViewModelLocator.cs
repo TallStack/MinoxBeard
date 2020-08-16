@@ -13,6 +13,7 @@ namespace MinoxBeard.Helpers
         public static AddRecordViewModel AddRecordViewModel => ServiceLocator.Current.GetInstance<AddRecordViewModel>(); 
         public static RoutineViewModel RoutineViewModel => ServiceLocator.Current.GetInstance<RoutineViewModel>();
         public static AddRoutineViewModel AddRoutineViewModel => ServiceLocator.Current.GetInstance<AddRoutineViewModel>();
+        public static ProfileViewModel ProfileViewModel => ServiceLocator.Current.GetInstance<ProfileViewModel>();
         
 
     }

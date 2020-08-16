@@ -13,7 +13,7 @@ namespace MinoxBeard.Helpers
             db = new SQLiteAsyncConnection(dbPath);
             db.CreateTableAsync<UsageModel>().Wait();
             db.CreateTableAsync<RoutineModel>().Wait();
-            db.CreateTableAsync<MoreInfo>().Wait();
+            //db.CreateTableAsync<MoreInfo>().Wait();
         }
 
         //Insert and Update new record  
@@ -50,6 +50,20 @@ namespace MinoxBeard.Helpers
         public Task<int> DeleteItemAsync(RoutineModel obj)
         {
             return db.DeleteAsync(obj);
+        }
+
+        //Delete All
+        public async void DeleteAllRecordsAsync()
+        {
+            await db.DropTableAsync<UsageModel>().ConfigureAwait(false);
+            await db.CreateTableAsync<UsageModel>().ConfigureAwait(false);
+            
+        } 
+        public async void DeleteAllRoutinesAsync()
+        {
+            await db.DropTableAsync<RoutineModel>().ConfigureAwait(false);
+            await db.CreateTableAsync<RoutineModel>().ConfigureAwait(false);
+            
         }
 
         //Read All Items  

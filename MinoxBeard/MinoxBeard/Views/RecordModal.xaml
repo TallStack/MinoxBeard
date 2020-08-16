@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MinoxBeard.Views.MessageModal" 
+             x:Class="MinoxBeard.Views.RecordModal" 
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
     <Frame CornerRadius="25" 
            HorizontalOptions="Center" 
@@ -13,14 +13,18 @@
            IsClippedToBounds="True"
            Padding="0">
         <StackLayout WidthRequest="200" Margin="12" Padding="24" Spacing="24" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White">
-            <Label Text=""
-                   x:Name="MessageTxt"
+            <Label Text="Delete all records?"
+                   
                TextColor="Blue"
                
                HorizontalOptions="Center">
-              
+
             </Label>
-            <Button HeightRequest="50" WidthRequest="100" Clicked="OkayClicked" BackgroundColor="BlueViolet" CornerRadius="25" TextColor="White" HorizontalOptions="FillAndExpand" Text="Okay"></Button>
+            <StackLayout Orientation="Horizontal">
+                <Button HeightRequest="50" WidthRequest="50"  BackgroundColor="Green" Clicked="Button_Clicked" CornerRadius="25" TextColor="White" HorizontalOptions="FillAndExpand" Text="Yes"></Button>
+                <Button HeightRequest="50" WidthRequest="50"  BackgroundColor="Red" Clicked="Button_Clicked_1" CornerRadius="25" TextColor="White" HorizontalOptions="FillAndExpand" Text="No"></Button>
+            </StackLayout>
+            
         </StackLayout>
     </Frame>
- </pages:PopupPage>
+</pages:PopupPage>

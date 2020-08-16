@@ -25,7 +25,7 @@
                     Source="photo" />
                 <ContentView Padding="20">
                     <StackLayout>
-                        <Label Text="Welcome to Minox Beard" TextColor="Gold" FontAttributes="Bold" FontSize="17" />
+                        <Label Text="" TextColor="Gold" FontAttributes="Bold" FontSize="17" x:Name="HeaderText" />
                         <Label Text="Here to assist You on your beard journey" TextColor="White" FontSize="15"/>
                         <Label Text="It may be a long journey but it will be all worth it in the end! Great things Take Time!" TextColor="White" FontSize="15"/>
 

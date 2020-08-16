@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,7 +21,16 @@ namespace MinoxBeard.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-           
+            bool hasKey = Preferences.ContainsKey("Name");
+            if(hasKey)
+            {
+                var Name = Preferences.Get("Name", "");
+                HeaderText.Text = "Welcome to Minox Beard, " + Name + "!";
+            }
+            else
+            {
+                HeaderText.Text = "Welcome to Minox Beard";
+            }
 
         } 
 

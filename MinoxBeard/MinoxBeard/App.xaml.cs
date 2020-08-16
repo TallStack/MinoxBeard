@@ -23,6 +23,7 @@ namespace MinoxBeard
             _builder.RegisterInstance(new AddRecordViewModel()).SingleInstance();
             _builder.RegisterInstance(new RoutineViewModel()).SingleInstance();
             _builder.RegisterInstance(new AddRoutineViewModel()).SingleInstance();
+            _builder.RegisterInstance(new ProfileViewModel()).SingleInstance();
             var container = _builder.Build();
 
             var autoFacLocator = new Autofac.Extras.CommonServiceLocator.AutofacServiceLocator(container);
