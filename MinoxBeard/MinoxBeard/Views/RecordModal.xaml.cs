@@ -25,7 +25,7 @@ namespace MinoxBeard.Views
             //await PopupNavigation.Instance.PushAsync(new RecordModal(), true);
              App.SQLiteDb.DeleteAllRecordsAsync();
             await PopupNavigation.Instance.PopAsync(true);
-            CrossLocalNotifications.Current.Show("Beard Brother!", "All your records have been cleared", 0);
+            CrossLocalNotifications.Current.Show("Beard Brother!", "All your records have been cleared", 1);
         }
 
         private async void Button_Clicked_1(object sender, EventArgs e)
