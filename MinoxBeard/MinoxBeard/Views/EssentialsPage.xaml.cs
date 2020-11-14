@@ -16,5 +16,10 @@ namespace MinoxBeard.Views
         {
             InitializeComponent();
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            moviesColView.SelectedItem = null;
+        }
     }
 }

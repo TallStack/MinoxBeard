@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:renderers="clr-namespace:MinoxBeard.Renderers"
+             xmlns:controls="clr-namespace:MinoxBeard.Controls"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             Shell.FlyoutBehavior="Disabled"
+             BackgroundColor="#1a2647"
+             x:Class="MinoxBeard.Views.AddRoutinePage">
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout >
+            <StackLayout Margin="5,5,5,5"  Orientation="Horizontal">
+                <Label Text="Add New Routine Reminder" FontSize="25" FontAttributes="Bold" TextColor="Gold"></Label>
+
+            </StackLayout>
+            <yummy:PancakeView
+            
+            Padding="30,50,30,30"
+            BackgroundColor="#1a2647"
+            
+            VerticalOptions="FillAndExpand">
+                <StackLayout Spacing="30">
+                    <StackLayout Spacing="20">
+                        <Label
+                        Margin="20,0,0,0"
+                        FontSize="20"
+                        Text="Dermaroll or Minoxidil Application"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"
+                        BackgroundColor="Purple"
+                        BorderThickness="1"
+                        CornerRadius="15"
+                        Elevation="3"
+                        HeightRequest="50"
+                            WidthRequest="20">
+                            <Picker x:Name="picker"
+                               Title="Select Type of Application"
+                               TitleColor="Purple"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               SelectedItem="{Binding ApplicationType}">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Minoxidil Application</x:String>
+                                        <x:String>Dermaroll</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </yummy:PancakeView>
+                    </StackLayout>
+                    <StackLayout Spacing="20">
+                        <Label
+                        Margin="20,0,0,0"
+                        FontSize="20"
+                        Text="Set time for Reminder"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"
+                        BackgroundColor="Purple"
+                        BorderThickness="1"
+                        CornerRadius="15"
+                        Elevation="3"
+                        HeightRequest="50">
+                            <TimePicker x:Name="_timePicker"
+                             FontAttributes="Bold"
+                             TextColor="White"
+                             Format="T"
+                             Time="{Binding Time}"
+                             />
+                        </yummy:PancakeView>
+                    </StackLayout>
+                    <StackLayout Spacing="20">
+                        <Label
+                        Margin="20,0,0,0"
+                        FontSize="20"
+                        Text="Additional Notes"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"
+                        BackgroundColor="Purple"
+                        BorderThickness="1"
+                        CornerRadius="15"
+                        Elevation="3"
+                        HeightRequest="50">
+                            <renderers:BorderlessEntry
+                            FontSize="25"
+                            ClearButtonVisibility="WhileEditing"
+                            TextColor="White" 
+                            Placeholder="Additional Notes?"
+                            Text="{Binding Note}"/>
+                        </yummy:PancakeView>
+                    </StackLayout>
+                    <StackLayout Spacing="20">
+                        <Label
+                        Margin="20,0,0,0"
+                        FontSize="20"
+                        Text="Select Day For Reminder"
+                        TextColor="#99A1B3" />
+                        <yummy:PancakeView
+                        Padding="10,0,0,0"
+                        BackgroundColor="Purple"
+                        BorderThickness="1"
+                        CornerRadius="15"
+                        Elevation="3"
+                        HeightRequest="50"
+                            WidthRequest="20">
+                            <Picker 
+                               Title="Select Day For Reminder"
+                               TitleColor="Purple"
+                               TextColor="White"
+                               FontAttributes="Bold"
+                               SelectedItem="{Binding DayType}">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Today</x:String>
+                                        <x:String>Everyday</x:String>
+                                        <x:String>Do not Set</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+
+                    <yummy:PancakeView
+                    BackgroundColor="#791AE5"
+                    BorderThickness="1"
+                    CornerRadius="25"
+                    Elevation="3"
+                    HeightRequest="50"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="150">
+                        <Label
+                        FontAttributes="Bold"
+                        FontSize="20"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Save"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" ></TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </yummy:PancakeView>
+                    
+
+                </StackLayout>
+            </yummy:PancakeView>
+            <controls:AdmobControl AdUnitId="ca-app-pub-5452051705648807/8530120426"></controls:AdmobControl>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

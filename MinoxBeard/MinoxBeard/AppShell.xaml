@@ -4,6 +4,7 @@
        xmlns:views="clr-namespace:MinoxBeard.Views"
        xmlns:controls="clr-namespace:MinoxBeard.Controls"
        FlyoutBackgroundColor="#2c417d"
+       Shell.TabBarTitleColor="White"
        FlyoutBackgroundImageAspect="AspectFill"
        FlyoutHeaderBehavior="CollapseOnScroll"
        BackgroundColor="#2c417d"
@@ -17,12 +18,16 @@
         
             <ShellContent Title="Home"
                           Icon="home">
-                <views:HomePage />
+                <views:LandingPage />
             </ShellContent>
            
         <ShellContent Title="Routine"
                       Icon="routine">
             <views:RoutinePage />
+        </ShellContent>
+        <ShellContent Title="Record"
+                      Icon="addicon">
+            <views:RecordPage />
         </ShellContent>
         <ShellContent Title="Essentials"
                       Icon="items">
@@ -36,13 +41,19 @@
     <FlyoutItem Title="Home"
                 Icon="home">
         <ShellContent>
-            <views:HomePage/>
+            <views:LandingPage/>
         </ShellContent>
     </FlyoutItem>
     <FlyoutItem Title="Routine"
                 Icon="routine">
         <ShellContent >
             <views:RoutinePage/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="Record Usage"
+                Icon="addicon">
+        <ShellContent >
+            <views:RecordPage/>
         </ShellContent>
     </FlyoutItem>
     <FlyoutItem Title="Essentials"
@@ -57,6 +68,31 @@
             <views:FaqsPage/>
         </ShellContent>
     </FlyoutItem>
+    
+
+    <MenuItem Text="About"
+               IconImageSource="about"
+              Command="{Binding NavigateCommand}" CommandParameter="about"/>
+    <MenuItem Text="Settings"
+               IconImageSource="settings"
+              Command="{Binding NavigateCommand}" CommandParameter="settings"/>
 
 
 </Shell>
+<!--<Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>-->
