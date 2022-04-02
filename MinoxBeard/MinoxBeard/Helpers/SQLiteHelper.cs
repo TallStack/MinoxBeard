@@ -15,7 +15,7 @@ namespace MinoxBeard.Helpers
             db.CreateTableAsync<RoutineModel>().Wait();
             //db.CreateTableAsync<MoreInfo>().Wait();
         }
-
+#region  Insert
         //Insert and Update new record  
         public Task<int> SaveItemAsync(UsageModel obj)
         {
@@ -40,7 +40,9 @@ namespace MinoxBeard.Helpers
                 return db.InsertAsync(obj);
             }
         }
+#endregion
 
+#region Delete
         //Delete  
         public Task<int> DeleteItemAsync(UsageModel obj)
         {
@@ -65,7 +67,9 @@ namespace MinoxBeard.Helpers
             await db.CreateTableAsync<RoutineModel>().ConfigureAwait(false);
             
         }
+#endregion
 
+#region Read
         //Read All Items  
         public Task<List<UsageModel>> GetItemsAsync()
         {
@@ -87,5 +91,6 @@ namespace MinoxBeard.Helpers
         {
             return db.Table<RoutineModel>().Where(i => i.RoutineID == RoutineID).FirstOrDefaultAsync();
         }
+        #endregion
     }
 }
