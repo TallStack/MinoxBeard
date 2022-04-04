@@ -23,7 +23,10 @@ namespace MinoxBeard.Views
             InitializeComponent();
             LoadRoutine();
         }
-
+        protected async override void OnAppearing()
+        {
+            await LoadRoutine();
+        }
         public async Task LoadRoutine()
         {
             await _routineViewModel.GetDbRoutines();

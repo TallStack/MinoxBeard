@@ -28,7 +28,8 @@ namespace MinoxBeard.Views
             BindingContext = _addroutineViewModel;
             //TODO: fix for collection refresh 
             if (check)
-                await Navigation.PushAsync(new RoutinePage());
+                //await Navigation.PushAsync(new RoutinePage());
+                await Navigation.PopAsync();
 
 
         }

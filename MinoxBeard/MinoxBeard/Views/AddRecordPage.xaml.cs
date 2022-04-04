@@ -28,8 +28,9 @@ namespace MinoxBeard.Views
             var check = await _addrecordViewModel.SaveUsage();
             BindingContext = _addrecordViewModel;
             //TODO: fix for collection refresh 
-            if(check)
-                await Navigation.PushAsync(new RecordPage());
+            if (check)
+                //await Navigation.PushAsync(new RecordPage());
+                await Navigation.PopAsync();
             
            
         }
