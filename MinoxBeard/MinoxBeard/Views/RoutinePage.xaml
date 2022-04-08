@@ -57,7 +57,7 @@
             
         </yummy:PancakeView>
        
-        <CollectionView Grid.Row="2" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+        <CollectionView x:Name="RoutineList" Grid.Row="2" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                         SelectionMode="None" ItemsSource="{Binding Routines}">
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>

@@ -26,13 +26,14 @@ namespace MinoxBeard.Views
         protected async override void OnAppearing()
         {
             await LoadRoutine();
+
         }
         public async Task LoadRoutine()
         {
-            await _routineViewModel.GetDbRoutines();
+            //await _routineViewModel.GetDbRoutines();
             _routineViewModel.Routines = await _routineViewModel.GetDbRoutines();
             BindingContext = _routineViewModel;
-
+            RoutineList.ItemsSource = _routineViewModel.Routines;
         }
 
 

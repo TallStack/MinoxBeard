@@ -16,7 +16,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
          
-            <CollectionView Grid.Row="1" Margin="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+            <CollectionView x:Name="RecordList" Grid.Row="1" Margin="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                         SelectionMode="None" ItemsSource="{Binding Usages}">
                 <CollectionView.Header>
                     <Label Text="Previous Use" TextColor="Gold" FontSize="20" FontAttributes="Bold"/>
