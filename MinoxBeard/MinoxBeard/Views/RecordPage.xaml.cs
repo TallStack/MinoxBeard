@@ -38,8 +38,9 @@ namespace MinoxBeard.Views
                 _recordViewModel.Usages = _recordViewModel.GetUses();
             else
                 _recordViewModel.Usages = await _recordViewModel.GetDbUses();
-            BindingContext = _recordViewModel;
+            
             RecordList.ItemsSource = _recordViewModel.Usages;
+            BindingContext = _recordViewModel;
 
         }
         private async Task OpenAnimation(View view, uint length = 250)

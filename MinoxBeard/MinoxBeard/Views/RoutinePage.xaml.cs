@@ -32,8 +32,9 @@ namespace MinoxBeard.Views
         {
             //await _routineViewModel.GetDbRoutines();
             _routineViewModel.Routines = await _routineViewModel.GetDbRoutines();
-            BindingContext = _routineViewModel;
+            
             RoutineList.ItemsSource = _routineViewModel.Routines;
+            BindingContext = _routineViewModel;
         }
 
 
